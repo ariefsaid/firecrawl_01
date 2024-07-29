@@ -16,10 +16,5 @@ COPY . .
 # Make port 3002 available to the world outside this container
 EXPOSE 3002
 
-# Define environment variables
-ENV REDIS_URL=redis://<user>:<pass>@redis.railway.internal:6379
-ENV USE_DB_AUTHENTICATION=false
-ENV PLAYWRIGHT_MICROSERVICE_URL=http://localhost:3000/scrape
-
 # Run the application
 CMD ["pnpm", "run", "start:production"]
